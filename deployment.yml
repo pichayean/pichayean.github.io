@@ -6,9 +6,9 @@ spec:
   selector:
     app: pgadmin-pod
   ports:
-  - port: 5050
+  - port: 80
     protocol: TCP
-    targetPort: 5050
+    targetPort: 80
   type: NodePort
 
 ---
@@ -27,7 +27,7 @@ spec:
         app: pgadmin-pod
     spec:
       containers:
-      - name: -container
+      - name: pgadmin-container
         image: dpage/pgadmin4
         resources:
           limits:
@@ -35,11 +35,11 @@ spec:
             cpu: "50m"
         env:
         - name: PGADMIN_DEFAULT_EMAIL
-          value: pgadmin4@pgadmin.org
+          value: 'pgadmin4@pgadmin.org'
         - name: PGADMIN_DEFAULT_PASSWORD
-          value: admin
+          value: 'admin'
         - name: PGADMIN_CONFIG_SERVER_MODE
-          value: False
+          value: 'false'
         ports:
         - containerPort: 5050
           protocol: TCP
@@ -54,7 +54,7 @@ metadata:
    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
  rules:
- - host: pgadmin.trustmacus.com
+ - host: pgadmin.codingholiday.com
    http:
      paths:
      - path: /
@@ -63,4 +63,4 @@ spec:
          service:
            name: pgadmin-service
            port:
-             number: 5050
+             number: 80
