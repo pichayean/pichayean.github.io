@@ -1,62 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info</title>
-    <style>
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-            margin: auto;
-            text-align: center;
-            }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Info</title>
 
-            .title {
-            color: grey;
-            font-size: 18px;
-            }
+  <!-- ✅ เพิ่ม Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-            button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            color: white;
-            background-color: #000;
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-            font-size: 18px;
-        }
+  <!-- ✅ เพิ่ม Font Awesome (ควรอยู่ใน <head>) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        a {
-        text-decoration: none;
-        font-size: 22px;
-        color: black;
-        }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fafafa;
+    }
 
-        button:hover, a:hover {
-        opacity: 0.7;
-        }
-    </style>
+    .card {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      max-width: 300px;
+      margin: 50px auto;
+      text-align: center;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .title {
+      color: grey;
+      font-size: 12px;
+    }
+
+    button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+      font-family: inherit;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 22px;
+      color: black;
+      margin: 0 5px;
+    }
+
+    button:hover, a:hover {
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
-    <!-- Add icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <div class="card">
+  <div class="card">
     <img src="https://avatars.githubusercontent.com/u/17903408?v=4" alt="John" style="width:100%">
     <h1>Macus Y</h1>
     <p class="title">Work-Shy Developer & Founder, Worker</p>
-    <p>University of Myself</p>
-    <small><a href="https://short.codingholiday.com" target="_blank">short.codingholiday.com</a> </small>
+    <p>University of Myself</p><br>
     <a href="#"><i class="fa fa-dribbble"></i></a> 
     <a href="#"><i class="fa fa-twitter"></i></a> 
     <a href="#"><i class="fa fa-linkedin"></i></a> 
     <a href="#"><i class="fa fa-facebook"></i></a> 
-    <p><button onclick="https://github.com/pichayean">Contact</button></p>
-    </div>
+    <p><button onclick="window.location.href='https://github.com/pichayean'">Contact</button></p>
+  </div>
 </body>
 </html>
